@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Post } from "../shared/post-class";
 import { PostService } from "../shared/post-service";
+import { Category } from "../shared/category-class";
+
 
 @Component({
   selector: 'EnergeticsComponent',
   template: `
-
     <h3>Produkti primāri izstrādātie Enerģētikas nozarei</h3>
     <div class="row col-md-8 col-md-offset-1"
         *ngFor="let product of products; let i = index;">
@@ -22,12 +23,16 @@ import { PostService } from "../shared/post-service";
 })
 export class EnergeticsComponent implements OnInit {
   private products: Post[];
+  private category: Category;
 
   constructor(private postService: PostService) { }
 
   ngOnInit() {
 // returns an ARRAY
-    this.products = this.postService.getPosts('energetics');
+    this.category = this.postService.getSelectedCatedory();
+    console.log(this.category, typeof this.category.category);
+    var str = this.category.category;
+    this.products = this.postService.getPosts(str);
     console.log(this.products);
     }
    setCurrentProduct(id){
