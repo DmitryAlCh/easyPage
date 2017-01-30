@@ -17,6 +17,7 @@ import { ProductsCategoriesComponent } from "./products/products-categories.comp
 import { WaterComponent } from "./products/water.component";
 import { OtherComponent } from "./products/other.component";
 import { SingleProductComponent } from "./products/single-product.component";
+import { ProductCategoryComponent } from "./products/product-category.component";
 
 import { ProjectTimelineComponent } from "./projects/project-timeline.component";
 
@@ -39,6 +40,7 @@ import { PostService } from "./shared/post-service";
     OtherComponent,
     SingleProductComponent,
     ProjectTimelineComponent,
+    ProductCategoryComponent,
     //PageNotfoundComponent,
 
   ],
