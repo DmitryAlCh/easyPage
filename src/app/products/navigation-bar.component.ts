@@ -17,7 +17,7 @@ export class NavigationTree implements OnInit {
 
   ngOnInit() {
     this.categories = this.postService.getCategoryList();
-    console.log(this.categories[0].category);
+    //console.log(this.categories[0].category);
   }
 
 }

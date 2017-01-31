@@ -3,6 +3,7 @@ import { Post } from "../shared/post-class";
 import { PostService } from "../shared/post-service";
 import { Category } from "../shared/category-class";
 
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'EnergeticsComponent',
@@ -15,8 +16,7 @@ import { Category } from "../shared/category-class";
         {{product.mainText}}
       </p>
       <a [routerLink]="[product.id]"
-          role="button"
-          (click)="setCurrentProduct(product.id)">Uzzinat vairāk..</a>
+          role="button">Uzzinat vairāk..</a>
     </div>
   `,
   styles: []
@@ -25,18 +25,20 @@ export class EnergeticsComponent implements OnInit {
   private products: Post[];
   private category: Category;
 
-  constructor(private postService: PostService) { }
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+    private postService: PostService,
+  ) { }
 
   ngOnInit() {
 // returns an ARRAY
-    this.category = this.postService.getSelectedCatedory();
-    console.log(this.category, typeof this.category.category);
-    var str = this.category.category;
-    this.products = this.postService.getPosts(str);
+    // console.log('router snapshot url '+ this.route.snapshot['url']);
+    // console.log('typeof url: '+ typeof this.route.snapshot['url'].toString());
+    //this.category = this.route.snapshot['url'].toString();
+    let prodCat = this.route.snapshot['url'].toString();
+    this.products = this.postService.getPosts(prodCat);
     console.log(this.products);
-    }
-   setCurrentProduct(id){
-     this.postService.setCurrentProductId(id);
     }
 
 }
