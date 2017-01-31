@@ -27,7 +27,7 @@ import { PostService } from "../shared/post-service";
     styles: []
 })
 export class SingleProductComponent implements OnInit {
-  
+
   private product: Post;
     constructor(
       private router: Router,
@@ -43,6 +43,11 @@ export class SingleProductComponent implements OnInit {
     ngOnInit() {
       let id = + this.route.snapshot.params['id']; // (+) converts id to NUMBER
       console.log("snapshot params id = "+id+'/n'+" typeof id = "+ typeof id);
-      this.product = this.postService.getExactPost(id);
+      try {
+        this.product = this.postService.getExactPost(id);
+      } catch(e){
+        console.log('product not found');
+      }
+
       }
 }

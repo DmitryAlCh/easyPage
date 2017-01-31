@@ -13,8 +13,7 @@ import { PostService } from "../shared/post-service";
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
         </p>
         <a role="button"
-            [routerLink]="[cat.category]"
-            (click)="setCategory(i)">Skatit vairak</a>
+            [routerLink]="[cat.category]">Skatit vairak</a>
       </div>
     </div>
   `,
@@ -28,11 +27,5 @@ export class ProductsCategoriesComponent implements OnInit {
 
   ngOnInit() {
     this.categories = this.postService.getCategoryList();
-
     }
-
-  setCategory(id){
-     this.postService.setSelectedCategory(id);
-  }
-
   }

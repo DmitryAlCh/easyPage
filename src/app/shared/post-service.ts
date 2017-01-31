@@ -41,28 +41,11 @@ export class PostService{
     return exactPost;
   }
 
-  setCurrentProductId(id){
-    this.selectedProductId = id;
-    console.log('current product ID:', id);
-    return;
-  }
-  getCurrentProductId(){
-    return this.selectedProductId;
-  }
-
   getCategoryList(){
     return this.categories;
   }
-  setSelectedCategory(id){
-    // console.log(id, typeof id);
-    this.selectedCategoryId = id;
-  }
 
-  getSelectedCatedory(){
-    // console.log(this.selectedProductId, typeof this.selectedProductId);
-    // console.log(this.categories);
-    return this.categories[this.selectedCategoryId];
-  }
+
 
 
 

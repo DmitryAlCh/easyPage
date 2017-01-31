@@ -14,8 +14,7 @@ import { LinksComponent } from "./mainViews/links.component";
 
 import { EnergeticsComponent } from "./products/energetics.component";
 import { ProductsCategoriesComponent } from "./products/products-categories.component";
-import { WaterComponent } from "./products/water.component";
-import { OtherComponent } from "./products/other.component";
+
 import { SingleProductComponent } from "./products/single-product.component";
 import { NavigationTree } from "./products/navigation-bar.component";
 
@@ -36,8 +35,6 @@ import { PostService } from "./shared/post-service";
     LinksComponent,
     EnergeticsComponent,
     ProductsCategoriesComponent,
-    WaterComponent,
-    OtherComponent,
     SingleProductComponent,
     ProjectTimelineComponent,
     NavigationTree,

@@ -32,10 +32,6 @@ export class EnergeticsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-// returns an ARRAY
-    // console.log('router snapshot url '+ this.route.snapshot['url']);
-    // console.log('typeof url: '+ typeof this.route.snapshot['url'].toString());
-    //this.category = this.route.snapshot['url'].toString();
     let prodCat = this.route.snapshot['url'].toString();
     this.products = this.postService.getPosts(prodCat);
     console.log(this.products);
