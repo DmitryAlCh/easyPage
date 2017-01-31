@@ -22,7 +22,9 @@ export class PostService{
     new Post('QP_2062', this.loremIpsum,'imagePath','water','2016','someLink',4),
     new Post('QP_2062', this.loremIpsum,'imagePath','energetics','2016','someLink',5),
   ];
-
+  private notFoundPost = new Post(
+    'Product not found', '','','','','',999
+  );
 
 
   constructor(){}
@@ -38,7 +40,12 @@ export class PostService{
     var exactPost = this.posts.find((post) => {
       return post.id===postId;
     });
-    return exactPost;
+    if (exactPost){
+      return exactPost;
+    } else {
+      return this.notFoundPost;
+    }
+
   }
 
   getCategoryList(){
