@@ -24,7 +24,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 export class EnergeticsComponent implements OnInit {
   private products: Post[];
   private category: Category;
-
+  private pathUrl: string;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -34,7 +34,8 @@ export class EnergeticsComponent implements OnInit {
   ngOnInit() {
     let prodCat = this.route.snapshot['url'].toString();
     this.products = this.postService.getPosts(prodCat);
-    console.log(this.router.url);
+    this.pathUrl = this.router.url;
+    // console.log(this.router.url);
     // console.log(this.products);
     }
 

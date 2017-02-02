@@ -23,6 +23,7 @@ export class ProductsCategoriesComponent implements OnInit {
 
   private categories: Category[];
   private selectedCategory: string;
+
   constructor(private postService: PostService) { }
 
   ngOnInit() {

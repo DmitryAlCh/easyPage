@@ -16,6 +16,7 @@ const APP_ROUTES: Routes = [
   { path: 'products', component: ProductsComponent, children: PRODUCT_ROUTES },
   { path: 'products/:id', component: ProductsComponent, children: PRODUCT_ROUTES },
   { path: 'projects', component: ProjectsComponent, children: PROJECT_ROUTES },
+  { path: 'projects/:id', component: ProjectsComponent, children: PROJECT_ROUTES },
   { path: 'links', component: LinksComponent },
   { path: '', redirectTo: '/about', pathMatch: 'full' },
   //{ path: '**', redirectTo: '/about', pathMatch: 'full'},
