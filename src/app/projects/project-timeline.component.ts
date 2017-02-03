@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'projects-timeline',
@@ -33,10 +35,15 @@ import { Component, OnInit } from '@angular/core';
   styles: []
 })
 export class ProjectTimelineComponent implements OnInit {
+  projectYear: string;
+  constructor(
+    private router: Router,
+    private route: ActivatedRoute,
+  ) { }
 
-  constructor() { }
 
   ngOnInit() {
+    console.log(this.route.snapshot.params['id']);
   }
 
 }

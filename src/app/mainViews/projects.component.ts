@@ -28,25 +28,31 @@ import { Router, ActivatedRoute } from '@angular/router';
   styles: []
 })
 export class ProjectsComponent implements OnInit {
-  yearSelected:boolean;
+  yearSelected:boolean = false;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
-
   ) { }
 
   ngOnInit() {
   }
 
   navigateToYear(year){
-    console.log(this.yearSelected);
-    if (this.yearSelected){
-      this.router.navigate(['../'], {relativeTo: this.route});
-    } else {
-      this.router.navigate([year], {relativeTo: this.route});
-    }
-    this.yearSelected = true;
-    console.log(this.yearSelected);
+    this.router.navigate(['./projects', year]);
   }
+
+
+  // navigateToYear(year){
+  //   console.log(this.router.url);
+  //   console.log(this.yearSelected);
+  //   console.log(this.route);
+  //   if (this.yearSelected){
+  //     this.router.navigate(['../'], {relativeTo: this.route});
+  //   } else {
+  //     this.router.navigate([year], {relativeTo: this.route});
+  //   }
+  //   this.yearSelected = true;
+  //   console.log(this.yearSelected);
+  // }
 
 }
