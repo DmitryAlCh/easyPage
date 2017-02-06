@@ -13,20 +13,10 @@
         <a [routerLink]="['links']" routerLinkActive="active-link" class="nav-link">Links</a>
       </li>
     </ul>
-    <ul class="nav navbar-nav navbar-right">
-      <li class="nav-item">
-        <a class="nav-link">LV</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" role="button">RU</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link">EN</a>
-      </li>
-    </ul>
+    <language-bar></language-bar>
   </div>
 </nav>
 <div class="container-fluid">
-  
+
   <router-outlet></router-outlet>
 </div>

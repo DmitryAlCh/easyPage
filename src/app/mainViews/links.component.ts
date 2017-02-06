@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-about',
   template: `
     <div class="jumbotron">
-      <h1>Uzņēmumi ar ilggadīgo sadarbīnu</h1>
+      <h1>Uzņēmumi ar ilggadīgo sadarbību</h1>
 
     </div>
     <div class="jumbotron">

@@ -11,6 +11,7 @@ import { AboutComponent } from "./mainViews/about.component";
 import { ProductsComponent } from "./mainViews/products.component";
 import { ProjectsComponent } from "./mainViews/projects.component";
 import { LinksComponent } from "./mainViews/links.component";
+import { LanguageBarComponent } from "./mainViews/language-bar.component";
 
 import { EnergeticsComponent } from "./products/energetics.component";
 import { ProductsCategoriesComponent } from "./products/products-categories.component";
@@ -38,6 +39,7 @@ import { PostService } from "./shared/post-service";
     SingleProductComponent,
     ProjectTimelineComponent,
     NavigationTree,
+    LanguageBarComponent,
     //PageNotfoundComponent,
 
   ],
