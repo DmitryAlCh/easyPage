@@ -21,6 +21,9 @@ export class PostService{
     new Post('Xport', this.loremIpsum,'imagePath','other','2016','someLink',3),
     new Post('QP_2062', this.loremIpsum,'imagePath','water','2016','someLink',4),
     new Post('QP_2062', this.loremIpsum,'imagePath','energetics','2016','someLink',5),
+    new Post('KSS izbūve Siguldā', this.loremIpsum,'imagePath','projects','2016','someLink',6),
+    new Post('NAI Izbūve Ķegumā', this.loremIpsum,'imagePath','projects','2016','someLink',7),
+    new Post('Ielas apgaismojuma izbūve Jekabpilī', this.loremIpsum,'imagePath','projects','2015','someLink',8),
   ];
   private notFoundPost = new Post(
     'Product not found', '','','','','',999
@@ -50,6 +53,10 @@ export class PostService{
 
   getCategoryList(){
     return this.categories;
+  }
+
+  getProjects(){
+    
   }
 
 

@@ -11,7 +11,9 @@ import { Router, ActivatedRoute } from '@angular/router';
     <div class="row">
       <div class="col-md-2">
         <ul class="list-group">
-          <li class="list-group-item"><a (click)="navigateToYear(2017)">2017</a><span class="badge">16</span></li>
+          <li class="list-group-item">
+            <a (click)="navigateToYear(2017)" routerLinkActive="active-link" class="nav-link">2017</a><span class="badge">16</span>
+          </li>
           <li class="list-group-item"><a (click)="navigateToYear(2016)">2016</a><span class="badge">8</span></li>
           <li class="list-group-item"><a (click)="navigateToYear(2015)">2015</a><span class="badge">10</span></li>
           <li class="list-group-item"><a (click)="navigateToYear(2014)">2014</a><span class="badge">44</span></li>
@@ -19,7 +21,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 
         </ul>
       </div>
-      <div class="col-md-8">
+      <div class="col-md-10">
         <router-outlet></router-outlet>
       </div>
 
