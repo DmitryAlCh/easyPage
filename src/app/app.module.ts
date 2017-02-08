@@ -22,6 +22,7 @@ import { NavigationTree } from "./products/navigation-bar.component";
 import { ProjectTimelineComponent } from "./projects/project-timeline.component";
 
 import { PostService } from "./shared/post-service";
+import { LanguageService } from "./shared/language-service";
 
 //import { PageNotfoundComponent } from "./mainViews/pagenotfound.component";
 
@@ -49,7 +50,7 @@ import { PostService } from "./shared/post-service";
     HttpModule,
     routing,
   ],
-  providers: [PostService],
+  providers: [PostService, LanguageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
